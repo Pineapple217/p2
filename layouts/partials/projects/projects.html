@@ -1,0 +1,17 @@
+<div class="posts">
+    <h1 class="title">Projects</h1>
+    {{ range $i, $e := (.Paginate (where .Site.RegularPages "Type" "projects")).Pages }}
+        <hr>
+        {{ partial "projects/project-entry.html" . }}
+    {{/*  <article class="post">
+        {{ partial "post/info.html" . }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+        <div class="read-more-link">
+            <a href="{{ .RelPermalink }}">Read More…</a>
+        </div>
+        {{ end }}
+    </article> */}}
+    {{- end }} 
+</div>
+{{ partial "pagination.html" . }}

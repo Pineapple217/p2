@@ -1,0 +1,21 @@
+.meta-text, .project-list-meta, .post-list-meta {
+    color: var(--date-color) !important;
+    font-size: var(--font-size-sm);
+    line-height: calc(8px + 1ex);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 15px;
+}
+
+.project-list-summary {
+    margin-top: 1em;
+}
+
+.project-entry-title a {
+    color: var(--text-color);
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}

@@ -1,7 +1,7 @@
 baseURL = 'https://pine32.be/'
 languageCode = 'en-uk'
 title = 'Pine'
-theme = 'poison'
+# theme = 'poison'
 paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
@@ -9,7 +9,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 [params]
     brand = "Pine"                      # name of your site - appears in the sidebar
     brand_image = "/img/temp.jpg"    # path to the image shown in the sidebar
-    description = "a dev i guess" # Used as default meta description if not specified in front matter
+    description = "Computer science and stuff" # Used as default meta description if not specified in front matter
     dark_mode = true                      # optional - defaults to false
     # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
 
@@ -21,6 +21,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
         # Limit:        If the files should be listed, how many should be shown.
     menu = [
         {Name = "About", URL = "/about/", HasChildren = false},
+        {Name = "Projects", URL = "/projects/"},
         {Name = "Posts", URL = "/posts/", Pre = "Recent", HasChildren = true, Limit = 5},
     ]
 
@@ -94,6 +95,6 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     # publisher_icon = ""                 # path to publisher icon - defaults to favicon, used in schema
 
 [taxonomies]
-    # category = 'categories'
+    category = 'categories'
     series = 'series'
     tags = 'tags'

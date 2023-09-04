@@ -1,0 +1,48 @@
+<div class="project-entry">
+  <div class="project-entry-img">
+    {{/*  {{ partial "general/feature-image.html" . }}  */}}
+    {{ with .Param "project types" }}
+    <div class="project-entry-type">
+      {{ range first 1 . }}
+        <a href="{{ "project-types" | absURL }}/{{ . | urlize }}/">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  <div class="project-entry-info">
+    <h2 class="project-entry-title">
+      {{ if .Content }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+      {{/*  <sup>{{ partial "general/label-drafts.html" . }}</sup>  */}}
+    </h2>
+    <div class="project-list-meta">
+      {{ with .Params.techstack }}
+      {{ range . }}
+        <span>{{ . }}</span>
+      {{ end }}
+      {{ end }}
+    </div>
+    <p class="project-list-summary">
+      {{- with .Params.Summary -}}
+        {{ . }}
+      {{- else -}}
+        {{- .Description -}}
+      {{- end -}}
+    </p>
+    {{ if or (.Params.live_url) (.Params.source_url) }}
+      <div class="btn-group">
+        {{ if (.Params.live_url )}}
+          <a class="btn-primary" href="{{ .Params.live_url }}" 
+            aria-label="Live for {{ .Params.Title }}" target="_blank">Live</a>
+        {{ end }}
+        {{ if (.Params.source_url )}}
+        <a class="btn-secondary" href="{{ .Params.source_url }}"
+          taria-label="Source for {{ .Params.Title }}" arget="_blank">Source</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
