@@ -1,7 +1,7 @@
 ---
 title: "Personal Website"
 date: 2023-09-02T22:00:45+02:00
-draft: true
+draft: false
 techstack:
   - Hugo
   - html/css
