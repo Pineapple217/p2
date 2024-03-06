@@ -1,16 +1,26 @@
 ---
-title: "Headscale Proxmox"
+title: "Homelab access anywhere by using Headscale"
 date: 2023-09-01T13:20:43+02:00
-draft: true
+draft: false
 hideToc: false
 tags:
   - Homelab
 series:
 ---
 
-## Headserver
+## Intro
 
-This server manages everything and needs to have a public IP address. Typically, this will be a VPS (Virtual Private Server). This server does not interact with the network and is not part of it. This can be easily achieved using Docker.
+To truly harness the potential of your Proxmox powered Homelab, there's a need for seamless and secure access from anywhere in the world. This is achieved by using a mesh VPN.
+
+We'll go into setting up a Homelab mesh VPN using [Headscale](https://github.com/juanfont/headscale) and [Tailscale](https://tailscale.com/). Headscale is simpley a selfhosted Tailscale control server. We'll not go into how meshnetworks work.
+
+In the end you (and only you) will have access to al your selfhosted services all over the world. We could even link multiple servers together securely.
+
+If you want to go fully selfhosted by using Headscale you wil need an VPS (virtual private server) or an other kind of server with a puplic IP address.
+
+## Setting up the Headscale control server
+
+This server manages everything and needs to have a public IP address. Typically, this will be a VPS. This server does not interact with the network and is not part of it. This can be easily achieved using Docker.
 
 ```yml
 # docker-compose.yml
