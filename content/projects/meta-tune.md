@@ -11,5 +11,3 @@ live_url: https://meta-tune.pine32.be/
 source_url: https://github.com/Pineapple217/meta-tune
 summary: Website to view metadata of Spotify songs easily.
 ---
-
-cool

@@ -8,5 +8,3 @@ techstack:
 source_url: https://github.com/Pineapple217/rube
 summary: Spinning 3D cube in the terminal.
 ---
-
-aaa
