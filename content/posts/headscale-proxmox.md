@@ -1,5 +1,5 @@
 ---
-title: "Homelab access anywhere by using Headscale"
+title: "Homelab access anywhere"
 date: 2023-09-01T13:20:43+02:00
 draft: false
 hideToc: false
